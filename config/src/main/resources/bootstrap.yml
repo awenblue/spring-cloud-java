@@ -1,5 +1,5 @@
 server:
-  port: 38771
+  port: 38100
 
 spring:
   application:
@@ -20,7 +20,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin123@127.0.0.1:38761/eureka/
+      defaultZone: http://admin:admin123@127.0.0.1:38000/eureka/
   instance:
     # 续约更新时间间隔（默认30秒）
     lease-renewal-interval-in-seconds: 10

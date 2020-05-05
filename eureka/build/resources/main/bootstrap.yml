@@ -9,7 +9,7 @@ spring:
     active: ${active}
 
 server:
-  port: 38761
+  port: 38000
 
 
 

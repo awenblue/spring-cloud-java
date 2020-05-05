@@ -1,10 +1,13 @@
 server:
-  port: 8400
+  port: 38200
 
 spring:
+  profiles: ${active}
   application:
-    name: zuul
-
+    name: zuul-server
+  cloud:
+    config:
+      uri: http://admin:admin123@127.0.0.1:38100/eureka/
 
 
 

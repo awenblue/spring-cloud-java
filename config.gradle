@@ -4,9 +4,10 @@ ext {
             springBootGradlePlugin:     "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion",
             eurekaServer:               "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server",
             configServer:               "org.springframework.cloud:spring-cloud-config-server",
+            configStart:                "org.springframework.cloud:spring-cloud-starter-config",
             hystrixDashboard:           "org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard",
             ribbon:                     "org.springframework.cloud:spring-cloud-starter-netflix-ribbon",
-            zuul:                     "org.springframework.cloud:spring-cloud-starter-netflix-zuul",
+            zuul:                       "org.springframework.cloud:spring-cloud-starter-netflix-zuul",
             springCloudSecurity:        "org.springframework.cloud:spring-cloud-starter-security",
             springBootWeb:              "org.springframework.boot:spring-boot-starter-web",
             springBootTest:             "org.springframework.boot:spring-boot-starter-test"
