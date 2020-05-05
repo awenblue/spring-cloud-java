@@ -1,0 +1,11 @@
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://admin:admin123@eureka:38761/eureka/  # 注册中心访问地址
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    enableSelfPreservation: false
+  instance:
+    prefer-ip-address: true

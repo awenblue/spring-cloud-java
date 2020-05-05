@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka
+  security:
+    user:
+      name: admin
+      password: admin123
+  profiles:
+    active: ${active}
+
+server:
+  port: 38761
+
+
+

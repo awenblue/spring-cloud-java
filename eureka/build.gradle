@@ -1,0 +1,9 @@
+
+dependencies {
+    testCompile depends.springBootTest
+
+    compile project(':common')
+
+    compile depends.eurekaServer
+    compile depends.springCloudSecurity
+}

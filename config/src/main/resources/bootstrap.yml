@@ -1,0 +1,28 @@
+server:
+  port: 38771
+
+spring:
+  application:
+    name: config-server
+  security:
+    user:
+      name: admin
+      password: admin123
+  cloud:
+    config:
+      profile: ${active}
+      label: ${active}
+      server:
+        git:
+          uri: https://github.com/awenblue/spring-cloud-config.git
+          searchPaths: '{application}'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin123@127.0.0.1:38761/eureka/
+  instance:
+    # 续约更新时间间隔（默认30秒）
+    lease-renewal-interval-in-seconds: 10
+    # 续约到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 10
