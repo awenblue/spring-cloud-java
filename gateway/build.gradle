@@ -1,0 +1,10 @@
+dependencies {
+    compile project(':common')
+
+
+    compile depends.eurekaClient
+    compile depends.hystrix
+    compile depends.ribbon
+    compile depends.gateway
+    compile depends.configStart
+}

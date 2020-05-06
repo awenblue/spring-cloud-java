@@ -1,0 +1,16 @@
+server:
+  port: 38200
+
+spring:
+  profiles:
+    active: ${active}
+  application:
+    name: gateway
+  cloud:
+    config:
+      uri: http://admin:admin123@127.0.0.1:38100
+      label: ${active}
+      profile: ${active}
+
+
+
