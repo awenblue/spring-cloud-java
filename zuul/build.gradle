@@ -8,5 +8,4 @@ dependencies {
     compile depends.ribbon
     compile depends.zuul
     compile depends.configStart
-    compile depends.springCloudSecurity
 }

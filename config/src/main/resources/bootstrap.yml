@@ -16,6 +16,7 @@ spring:
         git:
           uri: https://github.com/awenblue/spring-cloud-config.git
           searchPaths: '{application}'
+          default-label: ${active}
 
 eureka:
   client:
