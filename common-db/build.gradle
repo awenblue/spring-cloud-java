@@ -1,0 +1,7 @@
+dependencies {
+    compile project(':common')
+
+
+    compile depends.springBootJpa
+    compile depends.mysql
+}

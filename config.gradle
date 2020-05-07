@@ -13,7 +13,10 @@ ext {
             gateway:                    "org.springframework.cloud:spring-cloud-starter-gateway",
             springCloudSecurity:        "org.springframework.cloud:spring-cloud-starter-security",
             springBootWeb:              "org.springframework.boot:spring-boot-starter-web",
-            springBootTest:             "org.springframework.boot:spring-boot-starter-test"
+            springBootTest:             "org.springframework.boot:spring-boot-starter-test",
+            springBootJpa:              "org.springframework.boot:spring-boot-starter-data-jpa",
+            mysql:                      "mysql:mysql-connector-java",
+
     ]
 
     common = [

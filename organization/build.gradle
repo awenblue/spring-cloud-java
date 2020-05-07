@@ -1,0 +1,8 @@
+dependencies {
+    compile project(':common')
+    compile project(':common-db')
+
+
+    compile depends.eurekaClient
+    compile depends.springBootWeb
+}
