@@ -1,6 +1,4 @@
 dependencies {
-    compile project(':common')
-
     compile depends.eurekaServer
     compile depends.configServer
     compile depends.springCloudSecurity

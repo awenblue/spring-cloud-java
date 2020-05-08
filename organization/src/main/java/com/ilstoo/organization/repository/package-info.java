@@ -1,1 +1,0 @@
-package com.ilstoo.organization.repository;

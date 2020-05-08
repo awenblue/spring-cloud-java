@@ -1,0 +1,17 @@
+server:
+  port: 39100
+
+spring:
+  datasource:
+    url: jdbc:mysql://mysql:3306/db_org?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=GMT%2b8
+    username: root
+    password: 123456
+
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://authentication:39000/user
+
+
+

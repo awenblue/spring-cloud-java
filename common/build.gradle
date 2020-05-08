@@ -1,14 +1,6 @@
-plugins {
-    id 'java'
-}
-
-group 'com.ilstoo'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
+version '1.0.0'
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile depends.commonsLang
+    compile depends.lombok
 }

@@ -1,0 +1,44 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8
+    restart: always
+    expose:
+      - "3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_PASSWORD=123456
+      - MYSQL_DATABASE=db_org
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+  authentication:
+    build:
+      context: authentication
+      dockerfile: Dockerfile
+    restart: on-failure
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./logs:/log
+    expose:
+      - "39000"
+    ports:
+    - "39000:39000"
+  organization:
+    build:
+      context: organization
+      dockerfile: Dockerfile
+    restart: on-failure
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./logs:/log
+    expose:
+      - "39100"
+    ports:
+    - "39100:39100"
+    depends_on:
+      - mysql
+      - authentication

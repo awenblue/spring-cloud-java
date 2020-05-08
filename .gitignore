@@ -1,3 +1,10 @@
 .gradle/
 .idea/
 zuul/build/
+data/
+organization/build/
+authentication/build/
+common-web/build/
+common/build/
+common-db/build/
+echo/build/

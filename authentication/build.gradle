@@ -1,13 +1,9 @@
 version '1.0.0-SNAPSHOT'
 
 dependencies {
-    compile project(':common-db')
-    compile project(':common-web')
-
-
+    compile depends.xmlBind
+    compile depends.jaxbRuntime
     compile depends.springSecurityOauth
     compile depends.springCloudSecurity
-    compile depends.eurekaClient
     compile depends.springBootWeb
-    compile depends.SecurityOauth2AutoConfig
 }

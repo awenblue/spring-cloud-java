@@ -17,6 +17,7 @@ buildscript {
 }
 
 allprojects {
+    apply plugin: 'java'
     group 'com.ilstoo'
     repositories {
         mavenLocal()
@@ -31,8 +32,13 @@ allprojects {
 
 subprojects {
     apply plugin: 'java'
-    apply plugin: 'org.springframework.boot'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
     apply plugin: 'io.spring.dependency-management'
+    if (!it.name.startsWith('common')) {
+//    if (it.name != 'common') {
+        apply plugin: 'org.springframework.boot'
+    }
 
     ext {
         depends = rootProject.ext.dependencies
@@ -46,7 +52,11 @@ subprojects {
     [compileJava,compileTestJava,javadoc]*.options*.encoding = "$projectEncoding"
 
     dependencies {
-        testCompile depends.springBootTest
+        if (project.name != 'common') {
+            testCompile depends.springBootTest
+        }
+
+        testCompile depends.xmlBind
     }
 
     dependencyManagement {
