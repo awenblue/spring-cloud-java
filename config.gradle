@@ -13,7 +13,7 @@ ext {
             gateway:                    "org.springframework.cloud:spring-cloud-starter-gateway",
             springCloudSecurity:        "org.springframework.cloud:spring-cloud-starter-security",
             springSecurityOauth:        "org.springframework.security.oauth:spring-security-oauth2:2.4.1.RELEASE",
-            SecurityOauth2AutoConfig:   "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure",
+            securityOauth2AutoConfig:   "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure",
             springBootWeb:              "org.springframework.boot:spring-boot-starter-web:$springBootVersion",
             springBootTest:             "org.springframework.boot:spring-boot-starter-test:$springBootVersion",
             springBootJpa:              "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion",

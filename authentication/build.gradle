@@ -5,5 +5,6 @@ dependencies {
     compile depends.jaxbRuntime
     compile depends.springSecurityOauth
     compile depends.springCloudSecurity
+    compile depends.securityOauth2AutoConfig
     compile depends.springBootWeb
 }
