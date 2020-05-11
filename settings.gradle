@@ -7,7 +7,6 @@ include 'eureka'
 include 'config'
 include 'gateway'
 include 'echo'
-include 'gateway-admin'
 include 'organization'
 include 'authentication'
 

@@ -10,10 +10,10 @@ ENV active docker
 VOLUME /tmp
 
 # Make port 8080 available to the world outside this container
-EXPOSE 39100
+EXPOSE 38200
 
 # The application's jar file
-ARG JAR_FILE=build/libs/organization-1.0.0-SNAPSHOT.jar
+ARG JAR_FILE=build/libs/gateway-1.0.0-SNAPSHOT.jar
 
 # Add the application's jar to the container
 ADD ${JAR_FILE} app.jar

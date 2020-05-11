@@ -12,12 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Value("${echo.account}")
-    private String account;
-
     @GetMapping("/echo")
     @ResponseBody
     public String echo() {
-        return account;
+        return "echo";
     }
 }

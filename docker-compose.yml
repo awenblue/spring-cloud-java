@@ -13,6 +13,39 @@ services:
       - MYSQL_PASSWORD=123456
       - MYSQL_DATABASE=db_org
     command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+  eureka:
+    build:
+      context: eureka
+      dockerfile: Dockerfile
+    restart: on-failure
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "38000:38000"
+    depends_on:
+      - mysql
+  config:
+    build:
+      context: config
+      dockerfile: Dockerfile
+    restart: on-failure
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "38100:38100"
+    depends_on:
+      - eureka
+  gateway:
+    build:
+      context: gateway
+      dockerfile: Dockerfile
+    restart: on-failure
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "38200:38200"
+    depends_on:
+      - config
   authentication:
     build:
       context: authentication
@@ -22,10 +55,10 @@ services:
       - TZ=Asia/Shanghai
     volumes:
       - ./logs:/log
-    expose:
-      - "39000"
     ports:
-    - "39000:39000"
+      - "39000:39000"
+    depends_on:
+      - gateway
   organization:
     build:
       context: organization
@@ -35,10 +68,20 @@ services:
       - TZ=Asia/Shanghai
     volumes:
       - ./logs:/log
-    expose:
-      - "39100"
     ports:
     - "39100:39100"
     depends_on:
-      - mysql
-      - authentication
+      - gateway
+  echo:
+    build:
+      context: echo
+      dockerfile: Dockerfile
+    restart: on-failure
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./logs:/log
+    ports:
+      - "8080:8080"
+    depends_on:
+      - gateway

@@ -3,7 +3,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     service-url:
-      defaultZone: http://admin:admin123@eureka:38761/eureka/  # 注册中心访问地址
+      defaultZone: http://admin:admin123@eureka:38000/eureka/  # 注册中心访问地址
   server:
     waitTimeInMsWhenSyncEmpty: 0
     enableSelfPreservation: false

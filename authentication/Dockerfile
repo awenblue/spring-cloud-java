@@ -4,6 +4,8 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 # Add Maintainer Info
 LABEL maintainer="awenwhy@gmail.com"
 
+ENV active docker
+
 # Add a volume pointing to /tmp
 VOLUME /tmp
 

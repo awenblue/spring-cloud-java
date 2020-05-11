@@ -1,6 +1,16 @@
 server:
   port: 38100
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@eureka:38000/eureka/  # 注册中心访问地址
+  instance:
+    hostname: eureka
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+    prefer-ip-address: true
+
 spring:
   application:
     name: config-server
@@ -17,13 +27,3 @@ spring:
           uri: https://github.com/awenblue/spring-cloud-config.git
           searchPaths: '{application}'
           default-label: ${active}
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://admin:admin123@127.0.0.1:38000/eureka/
-  instance:
-    # 续约更新时间间隔（默认30秒）
-    lease-renewal-interval-in-seconds: 10
-    # 续约到期时间（默认90秒）
-    lease-expiration-duration-in-seconds: 10

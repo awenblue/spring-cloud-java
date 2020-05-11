@@ -7,4 +7,5 @@ dependencies {
     compile depends.springCloudSecurity
     compile depends.securityOauth2AutoConfig
     compile depends.springBootWeb
+    compile depends.eurekaClient
 }

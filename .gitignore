@@ -8,3 +8,6 @@ common-web/build/
 common/build/
 common-db/build/
 echo/build/
+config/build/
+eureka/build/
+gateway/build/
