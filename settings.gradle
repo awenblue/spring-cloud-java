@@ -9,4 +9,5 @@ include 'gateway'
 include 'echo'
 include 'organization'
 include 'authentication'
+include 'authentication-client'
 

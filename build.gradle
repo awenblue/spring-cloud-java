@@ -35,8 +35,14 @@ subprojects {
     apply plugin: 'idea'
     apply plugin: 'eclipse'
     apply plugin: 'io.spring.dependency-management'
-    if (!it.name.startsWith('common')) {
-//    if (it.name != 'common') {
+//    if (!it.name.startsWith('common')) {
+////    if (it.name != 'common') {
+//        apply plugin: 'org.springframework.boot'
+//    }
+    def moduleName = it.name
+    def filterModules = ['common', 'client']
+    def flag = filterModules.any{ item -> moduleName.contains(item) }
+    if (!flag) {
         apply plugin: 'org.springframework.boot'
     }
 
@@ -55,6 +61,9 @@ subprojects {
         if (project.name != 'common') {
             testCompile depends.springBootTest
         }
+
+        compileOnly depends.lombok
+        annotationProcessor depends.lombok
 
         testCompile depends.xmlBind
     }

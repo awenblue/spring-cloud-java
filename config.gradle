@@ -2,6 +2,7 @@ ext {
     dependencies = [
             springCloudDependencies:    "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion",
             springBootGradlePlugin:     "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion",
+            springCloudCore:            "org.springframework.cloud:spring-cloud-core:1.2.9.RELEASE",
             eurekaServer:               "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server",
             eurekaClient:               "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
             configServer:               "org.springframework.cloud:spring-cloud-config-server",
@@ -26,6 +27,7 @@ ext {
             lombok:                     "org.projectlombok:lombok:1.18.12",
             xmlBind:                    "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2",
             jaxbRuntime:                "org.glassfish.jaxb:jaxb-runtime:2.3.2",
+            jjwt:                       "io.jsonwebtoken:jjwt:0.9.1",
 
 
     ]

@@ -1,0 +1,9 @@
+version '1.0.0'
+
+dependencies {
+    compile project(':common')
+    compile depends.springCloudCore
+    compile depends.openFeign
+    compile depends.feignOkHttp
+    compile depends.jjwt
+}

@@ -1,12 +1,12 @@
 version '1.0.0-SNAPSHOT'
 
 dependencies {
-    compile project(':common')
+    compile project(':authentication-client')
 
     compile depends.eurekaClient
     compile depends.hystrix
     compile depends.ribbon
     compile depends.gateway
-    compile depends.openFeign
-    compile depends.feignOkHttp
+
+    compile depends.xmlBind
 }
