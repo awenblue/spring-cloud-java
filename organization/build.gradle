@@ -1,14 +1,12 @@
 version '1.0.0-SNAPSHOT'
 
 dependencies {
+    compile project(':common-web')
     compile project(':common-db')
-
-    compile depends.springSecurityOauth
-    compile depends.springCloudSecurity
     compile depends.eurekaClient
-    compile depends.securityOauth2AutoConfig
     compile depends.servlet
     compile depends.springBootWeb
     compile depends.openFeign
     compile depends.feignOkHttp
+    compile depends.hystrix
 }

@@ -16,8 +16,10 @@ ext {
             zuul:                       "org.springframework.cloud:spring-cloud-starter-netflix-zuul",
             gateway:                    "org.springframework.cloud:spring-cloud-starter-gateway",
             springCloudSecurity:        "org.springframework.cloud:spring-cloud-starter-security",
+            springSecurityJwt:          "org.springframework.security:spring-security-jwt:1.1.0.RELEASE",
             springSecurityOauth:        "org.springframework.security.oauth:spring-security-oauth2:2.4.1.RELEASE",
             securityOauth2AutoConfig:   "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure",
+            springTX:                   "org.springframework:spring-tx:$springVersion",
             springBootWeb:              "org.springframework.boot:spring-boot-starter-web:$springBootVersion",
             springBootTest:             "org.springframework.boot:spring-boot-starter-test:$springBootVersion",
             springBootJpa:              "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion",
@@ -25,8 +27,8 @@ ext {
             servlet:                    "javax.servlet:javax.servlet-api:4.0.1",
             commonsLang:                "org.apache.commons:commons-lang3:3.10",
             lombok:                     "org.projectlombok:lombok:1.18.12",
-            xmlBind:                    "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2",
-            jaxbRuntime:                "org.glassfish.jaxb:jaxb-runtime:2.3.2",
+            xmlBind:                    "jakarta.xml.bind:jakarta.xml.bind-api:2.3.3",
+            jaxbRuntime:                "org.glassfish.jaxb:jaxb-runtime:2.3.3",
             jjwt:                       "io.jsonwebtoken:jjwt:0.9.1",
 
 

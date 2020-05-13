@@ -2,6 +2,7 @@ package com.ilstoo.authentication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -19,7 +20,7 @@ import java.util.Map;
  */
 @SpringBootApplication
 @RestController
-@EnableEurekaClient
+@EnableDiscoveryClient
 @EnableResourceServer
 @EnableAuthorizationServer
 public class AuthApplication {

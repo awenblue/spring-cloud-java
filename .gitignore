@@ -12,3 +12,4 @@ config/build/
 eureka/build/
 gateway/build/
 authentication-client/build/
+authentication-server/build/

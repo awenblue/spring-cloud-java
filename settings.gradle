@@ -10,4 +10,5 @@ include 'echo'
 include 'organization'
 include 'authentication'
 include 'authentication-client'
+include 'authentication-server'
 

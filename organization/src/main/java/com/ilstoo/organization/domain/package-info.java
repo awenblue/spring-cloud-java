@@ -1,0 +1,1 @@
+package com.ilstoo.organization.domain;

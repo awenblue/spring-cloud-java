@@ -13,8 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableEurekaClient
-@EnableFeignClients
+@EnableFeignClients(value = {"com.ilstoo.authentication.client"})
 public class GatewayApplication {
 
     public static void main(String[] args) {

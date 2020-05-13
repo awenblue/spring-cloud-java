@@ -40,8 +40,16 @@ public class UserEntity extends BaseEntity {
     @Column(length = 100, nullable = false)
     private String updatedBy;
 
-    private Boolean enable;
+    @Column(length = 1, nullable = false)
+    private String deleted;
 
-    private Boolean locked;
+    private Boolean enabled;
+
+    private Boolean accountNonLocked;
+
+    private Boolean accountNonExpired;
+
+    private Boolean credentialsNonExpired;
+
 
 }

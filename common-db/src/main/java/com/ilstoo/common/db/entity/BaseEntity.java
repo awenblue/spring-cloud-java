@@ -1,5 +1,7 @@
 package com.ilstoo.common.db.entity;
 
+import lombok.Data;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,6 +13,7 @@ import java.time.LocalDateTime;
  * @create 2020-05-07 18:12
  */
 
+@Data
 @MappedSuperclass
 public abstract class BaseEntity {
 
@@ -18,8 +21,8 @@ public abstract class BaseEntity {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id = -1L;
 
-    private LocalDateTime createTime = LocalDateTime.now();
+    private LocalDateTime createdTime = LocalDateTime.now();
 
-    private LocalDateTime updateTime = LocalDateTime.now();
+    private LocalDateTime updatedTime = LocalDateTime.now();
 
 }
