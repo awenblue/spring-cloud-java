@@ -7,6 +7,7 @@ dependencies {
     compile depends.hystrix
     compile depends.ribbon
     compile depends.gateway
-
+    compile depends.springBootRedisReactive
+    compile depends.jetcacheRedis
     compile depends.xmlBind
 }

@@ -1,13 +1,20 @@
 spring:
-  cloud:
-    gateway:
-      routes:
-        - id: echo
-          uri: lb://echo
-          predicates:
-            - Path=/echo/**
-        - id: organization
-          uri: lb://organization
-          order: 1
-          predicates:
-            - Path=/org/**
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: echo
+#          uri: lb://echo
+#          predicates:
+#            - Path=/echo/**
+#        - id: organization
+#          uri: lb://organization
+#          order: 1
+#          predicates:
+#            - Path=/org/**
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    #password: ${REDIS_PASSWORD:}
+    lettuce:
+      pool:
+        max-active: 300

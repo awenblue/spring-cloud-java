@@ -23,6 +23,8 @@ ext {
             springBootWeb:              "org.springframework.boot:spring-boot-starter-web:$springBootVersion",
             springBootTest:             "org.springframework.boot:spring-boot-starter-test:$springBootVersion",
             springBootJpa:              "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion",
+            springBootRedisReactive:    "org.springframework.boot:spring-boot-starter-data-redis-reactive:$springBootVersion",
+            jetcacheRedis:              "com.alicp.jetcache:jetcache-starter-redis:2.6.0",
             mysql:                      "mysql:mysql-connector-java:$mysqlConnector",
             servlet:                    "javax.servlet:javax.servlet-api:4.0.1",
             commonsLang:                "org.apache.commons:commons-lang3:3.10",
