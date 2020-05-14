@@ -2,6 +2,7 @@ package com.ilstoo.organization.domain.service.impl;
 
 import com.ilstoo.organization.domain.service.RoleService;
 import com.ilstoo.organization.domain.service.UserRoleService;
+import com.ilstoo.organization.exception.RoleNotFoundException;
 import com.ilstoo.organization.repository.entity.RoleEntity;
 import com.ilstoo.organization.repository.jpa.RoleRepository;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,16 @@ public class RoleServiceImpl implements RoleService {
             return Collections.emptyList();
 
         return roleRepository.findAllById(ids);
+    }
+
+    @Override
+    public RoleEntity get(Long id) {
+        return roleRepository.findById(id)
+                .orElseThrow(RoleNotFoundException::new);
+    }
+
+    @Override
+    public List<RoleEntity> getAll() {
+        return roleRepository.findAll();
     }
 }

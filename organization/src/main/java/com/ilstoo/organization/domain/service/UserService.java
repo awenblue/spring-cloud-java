@@ -6,4 +6,5 @@ public interface UserService {
 
     UserEntity getByUniqueId(String uniqueId);
 
+    UserEntity get(Long id);
 }

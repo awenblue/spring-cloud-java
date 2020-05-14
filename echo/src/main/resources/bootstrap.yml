@@ -5,7 +5,7 @@ spring:
     active: ${active}
 
 server:
-  port: 8080
+  port: 39200
 
 eureka:
   client:

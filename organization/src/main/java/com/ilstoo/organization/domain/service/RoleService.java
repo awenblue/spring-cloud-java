@@ -8,4 +8,7 @@ public interface RoleService {
 
     List<RoleEntity> listByUser(Long userId);
 
+    RoleEntity get(Long id);
+
+    List<RoleEntity> getAll();
 }

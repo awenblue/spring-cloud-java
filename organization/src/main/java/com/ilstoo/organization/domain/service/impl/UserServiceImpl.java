@@ -23,4 +23,10 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByUsernameOrMobile(uniqueId, uniqueId)
                 .orElseThrow(UserNotFoundException::new);
     }
+
+    @Override
+    public UserEntity get(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(UserNotFoundException::new);
+    }
 }
