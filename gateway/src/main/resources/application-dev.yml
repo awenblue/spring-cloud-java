@@ -8,5 +8,6 @@ spring:
             - Path=/echo/**
         - id: organization
           uri: lb://organization
+          order: 1
           predicates:
             - Path=/org/**

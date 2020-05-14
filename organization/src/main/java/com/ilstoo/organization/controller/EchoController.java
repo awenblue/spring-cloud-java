@@ -17,13 +17,13 @@ public class EchoController {
     @Resource
     private EchoVisitor echoVisitor;
 
-    @GetMapping("/org/echo")
+    @GetMapping("/echo")
     @ResponseBody
     public String echo() {
         return "Welcome!";
     }
 
-    @GetMapping("/org/visit")
+    @GetMapping("/visit")
     @ResponseBody
     public String visit() {
         return echoVisitor.echo();
