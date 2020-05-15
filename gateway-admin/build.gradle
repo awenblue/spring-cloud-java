@@ -1,0 +1,14 @@
+version '1.0.0'
+
+dependencies {
+    compile project(':common-web')
+    compile project(':common-db')
+    compile depends.gatewayCore
+    compile depends.springBootRedisReactive
+    compile depends.jetcacheRedis
+    compile depends.jedis
+    compile depends.busAmqp
+    compile depends.hystrix
+    compile depends.xmlBind
+    compile depends.eurekaClient
+}

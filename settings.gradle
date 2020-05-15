@@ -11,4 +11,6 @@ include 'organization'
 include 'authentication'
 include 'authentication-client'
 include 'authentication-server'
+include 'gateway-admin'
+include 'center'
 

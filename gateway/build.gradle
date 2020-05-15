@@ -9,5 +9,6 @@ dependencies {
     compile depends.gateway
     compile depends.springBootRedisReactive
     compile depends.jetcacheRedis
+    compile depends.jedis
     compile depends.xmlBind
 }

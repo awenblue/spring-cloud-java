@@ -13,3 +13,5 @@ eureka/build/
 gateway/build/
 authentication-client/build/
 authentication-server/build/
+center/build/
+gateway-admin/build/

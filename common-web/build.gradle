@@ -4,4 +4,8 @@ dependencies {
     compile project(':common')
     compile depends.springBootWeb
     compile depends.springTX
+    compile depends.commonsPool2
+    compile depends.springBootRedis
+    compile depends.jacksonDatabind
+    compile depends.jakartaPersistence
 }

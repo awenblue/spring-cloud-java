@@ -1,0 +1,18 @@
+server:
+  port: 38280
+
+spring:
+  profiles:
+    active: ${active}
+  application:
+    name: gateway-admin
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@eureka:38000/eureka/  # 注册中心访问地址
+  instance:
+    hostname: eureka
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+    prefer-ip-address: true

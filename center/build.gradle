@@ -1,0 +1,7 @@
+version '1.0.0'
+
+dependencies {
+    compile depends.eurekaClient
+    compile depends.busAmqp
+    compile depends.springBootWeb
+}

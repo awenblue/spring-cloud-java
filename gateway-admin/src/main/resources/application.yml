@@ -1,6 +1,6 @@
 spring:
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:localhost}
+    host: ${RABBIT_MQ_HOST:127.0.0.1}
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
@@ -12,11 +12,16 @@ spring:
       pool:
         max-active: 300
 
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:${DATASOURCE_DBTYPE:mysql}://${DATASOURCE_HOST:localhost}:${DATASOURCE_PORT:3306}/db_gateway?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=GMT%2b8
+    username: ${DATASOURCE_USERNAME:root}
+    password: ${DATASOURCE_PASSWORD:123456}
 
 jetcache:
-  statIntervalMinutes: 1
+  statIntervalMinutes: 15
   areaInCacheName: false
-  hidePackages: com.springboot.cloud
+  hidePackages: com.ilstoo.gateway
   local:
     # 默认永久本地缓存
     default:
@@ -35,9 +40,3 @@ jetcache:
         maxTotal: 50
       host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}
-
-#网关白名单，无需要签权url
-gate:
-  ignore:
-    authentication:
-      startWith: /oauth,/open,/v2/api-docs
