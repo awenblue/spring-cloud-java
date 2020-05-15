@@ -23,6 +23,7 @@ ext {
             securityOauth2AutoConfig:   "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure",
             springTX:                   "org.springframework:spring-tx:$springVersion",
             springBootWeb:              "org.springframework.boot:spring-boot-starter-web:$springBootVersion",
+            springBootWebFlux:          "org.springframework.boot:spring-boot-starter-webflux:$springBootVersion",
             springBootTest:             "org.springframework.boot:spring-boot-starter-test:$springBootVersion",
             springBootJpa:              "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion",
             springBootRedisReactive:    "org.springframework.boot:spring-boot-starter-data-redis-reactive:$springBootVersion",
