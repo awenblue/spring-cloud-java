@@ -11,4 +11,5 @@ dependencies {
     compile depends.jetcacheRedis
     compile depends.jedis
     compile depends.xmlBind
+    compile depends.busAmqp
 }

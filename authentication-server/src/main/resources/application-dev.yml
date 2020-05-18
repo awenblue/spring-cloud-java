@@ -1,0 +1,6 @@
+logging:
+  level:
+    com.ilstoo: debug
+  file:
+    path: logs/
+    max-size: 10MB

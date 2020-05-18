@@ -1,6 +1,16 @@
 server:
   port: 38300
 
+spring:
+  application:
+    name: authentication-server
+  profiles:
+    active: ${active}
+  security:
+    user:
+      name: admin
+      password: admin123
+
 eureka:
   client:
     service-url:
@@ -11,10 +21,3 @@ eureka:
     lease-expiration-duration-in-seconds: 10
     prefer-ip-address: true
 
-spring:
-  application:
-    name: authentication-server
-  security:
-    user:
-      name: admin
-      password: admin123
