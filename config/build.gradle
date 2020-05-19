@@ -3,5 +3,7 @@ version '1.0.0-SNAPSHOT'
 dependencies {
     compile depends.eurekaServer
     compile depends.configServer
-    compile depends.springCloudSecurity
+    compile depends.busAmqp
+    compile depends.springBootActuator
+    compile depends.springBootWeb
 }

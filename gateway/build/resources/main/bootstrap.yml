@@ -6,11 +6,11 @@ spring:
     active: ${active}
   application:
     name: gateway
-#  cloud:
-#    config:
-#      uri: http://admin:admin123@config:38100
-#      label: ${active}
-#      profile: ${active}
+  cloud:
+    config:
+      uri: http://admin:admin123@config:38100
+      label: ${active}
+      profile: ${active}
 
 
 eureka:

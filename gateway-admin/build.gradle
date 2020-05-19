@@ -8,6 +8,7 @@ dependencies {
     compile depends.jetcacheRedis
     compile depends.jedis
     compile depends.busAmqp
+    compile depends.springBootActuator
     compile depends.hystrix
     compile depends.xmlBind
     compile depends.eurekaClient

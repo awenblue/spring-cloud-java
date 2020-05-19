@@ -4,8 +4,8 @@ dependencies {
     compile project(':common')
 
     compile depends.eurekaServer
+    compile depends.configStart
+    compile depends.busAmqp
+    compile depends.springBootActuator
     compile depends.springBootWeb
-    compile depends.springSecurityOauth
-    compile depends.springCloudSecurity
-    compile depends.securityOauth2AutoConfig
 }
