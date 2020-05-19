@@ -15,3 +15,4 @@ authentication-client/build/
 authentication-server/build/
 center/build/
 gateway-admin/build/
+logs/
