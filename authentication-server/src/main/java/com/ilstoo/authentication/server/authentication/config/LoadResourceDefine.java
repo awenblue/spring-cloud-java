@@ -6,6 +6,7 @@ import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.Map;
 
@@ -18,8 +19,8 @@ class LoadResourceDefine {
     @Resource
     private IResourceService resourceService;
 
-    @Bean
-    public Map<RequestMatcher, ConfigAttribute> resourceConfigAttributes() {
-        return resourceService.loadResource();
+    @PostConstruct
+    public void resourceConfigAttributes() {
+        resourceService.loadResource();
     }
 }
