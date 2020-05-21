@@ -11,10 +11,15 @@ public interface MyProcessor {
 
     String INPUT = "my_topic_input";
 
+    String INPUT1 = "my_topic1_input";
+
+
     @Output(OUTPUT)
     MessageChannel output();
 
     @Input(INPUT)
     SubscribableChannel input();
 
+    @Input(INPUT1)
+    SubscribableChannel input1();
 }

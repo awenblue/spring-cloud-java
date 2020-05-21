@@ -21,6 +21,12 @@ public class EchoApplication {
 
 	@StreamListener(MyProcessor.INPUT)
 	public void listen(@Payload String in, @Header(AmqpHeaders.CONSUMER_QUEUE) String queue) {
-		System.out.println(in + " received from queue " + queue);
+		System.out.println(MyProcessor.INPUT + "===>" + in + " received from queue " + queue);
 	}
+
+	@StreamListener(MyProcessor.INPUT1)
+	public void listen1(@Payload String in, @Header(AmqpHeaders.CONSUMER_QUEUE) String queue) {
+		System.out.println(MyProcessor.INPUT1 + "===>" + in + " received from queue " + queue);
+	}
+
 }
