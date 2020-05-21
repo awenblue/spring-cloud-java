@@ -8,4 +8,5 @@ dependencies {
     compile depends.busAmqp
     compile depends.springBootActuator
     compile depends.springBootWeb
+    compile depends.streamRabbit
 }

@@ -8,6 +8,7 @@ ext {
             configServer:               "org.springframework.cloud:spring-cloud-config-server",
             configStart:                "org.springframework.cloud:spring-cloud-starter-config",
             busAmqp:                    "org.springframework.cloud:spring-cloud-starter-bus-amqp",
+            streamRabbit:               "org.springframework.cloud:spring-cloud-starter-stream-rabbit",
             openFeign:                  "org.springframework.cloud:spring-cloud-starter-openfeign",
             feignOkHttp:                "io.github.openfeign:feign-okhttp",
             hystrixDashboard:           "org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard",

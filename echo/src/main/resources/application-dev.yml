@@ -5,6 +5,27 @@ spring:
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
 
+  cloud:
+    stream:
+      bindings:
+        my_topic_output:
+          destination: aaa-topic
+          binder: local_rabbit
+        my_topic_input:
+          destination: aaa-topic
+          binder: local_rabbit
+      binders:
+        local_rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: ${RABBIT_MQ_HOST:localhost}
+                port: ${RABBIT_MQ_PORT:5672}
+                username: ${RABBIT_MQ_USERNAME:guest}
+                password: ${RABBIT_MQ_PASSWORD:guest}
+                virtual-host: /
+
 management:
   endpoints:
     web:
