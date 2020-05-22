@@ -11,4 +11,5 @@ dependencies {
     compile depends.ribbon
     compile depends.xmlBind
     compile depends.jaxbRuntime
+    compile depends.zipkin
 }

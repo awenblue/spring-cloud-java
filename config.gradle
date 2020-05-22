@@ -10,6 +10,7 @@ ext {
             busAmqp:                    "org.springframework.cloud:spring-cloud-starter-bus-amqp",
             streamRabbit:               "org.springframework.cloud:spring-cloud-starter-stream-rabbit",
             openFeign:                  "org.springframework.cloud:spring-cloud-starter-openfeign",
+            zipkin:                    "org.springframework.cloud:spring-cloud-starter-zipkin",
             feignOkHttp:                "io.github.openfeign:feign-okhttp",
             hystrixDashboard:           "org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard",
             hystrix:                    "org.springframework.cloud:spring-cloud-starter-netflix-hystrix",

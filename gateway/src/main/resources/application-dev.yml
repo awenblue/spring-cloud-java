@@ -12,6 +12,13 @@ spring:
       pool:
         max-active: 300
 
+  zipkin:
+    enabled: true
+    baseUrl: http://127.0.0.1:9411
+  sleuth:
+    sampler:
+      rate: 100
+
 
 jetcache:
   statIntervalMinutes: 1

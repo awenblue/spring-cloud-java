@@ -9,4 +9,5 @@ dependencies {
     compile depends.openFeign
     compile depends.feignOkHttp
     compile depends.hystrix
+    compile depends.zipkin
 }

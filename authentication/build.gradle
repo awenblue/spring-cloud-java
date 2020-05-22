@@ -15,4 +15,5 @@ dependencies {
     compile depends.hystrix
     compile depends.ribbon
     compile depends.springSecurityJwt
+    compile depends.zipkin
 }

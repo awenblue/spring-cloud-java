@@ -14,4 +14,5 @@ dependencies {
     compile depends.configStart
     compile depends.busAmqp
     compile depends.springBootActuator
+    compile depends.zipkin
 }

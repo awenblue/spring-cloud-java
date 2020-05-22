@@ -8,3 +8,9 @@ spring:
     oauth2:
       jwt:
         signingKey: 123456
+  zipkin:
+    enabled: true
+    baseUrl: http://127.0.0.1:9411
+  sleuth:
+    sampler:
+      rate: 100

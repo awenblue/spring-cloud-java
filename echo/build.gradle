@@ -9,4 +9,5 @@ dependencies {
     compile depends.springBootActuator
     compile depends.springBootWeb
     compile depends.streamRabbit
+    compile depends.zipkin
 }
